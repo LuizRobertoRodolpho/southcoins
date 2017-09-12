@@ -1,0 +1,25 @@
+{
+  "name": "southcoins",
+  "version": "1.0.0",
+  "description": "Projeto da galera do sul para acompanhamento de moedas digitais.",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.15.4",
+    "http": "^0.0.0",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuizRobertoRodolpho/southcoins.git"
+  },
+  "author": "Luiz Roberto Lethang Rodolpho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuizRobertoRodolpho/southcoins/issues"
+  },
+  "homepage": "https://github.com/LuizRobertoRodolpho/southcoins#readme"
+}
