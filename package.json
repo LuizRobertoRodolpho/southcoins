@@ -1,7 +1,7 @@
 {
   "name": "southcoins",
   "version": "1.0.0",
-  "description": "Projeto da galera do sul para acompanhamento de moedas digitais.",
+  "description": "Projeto da galera do Sul para acompanhamento de moedas digitais.",
   "main": "main.js",
   "dependencies": {
     "express": "^4.15.4",
@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
