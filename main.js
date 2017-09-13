@@ -4,6 +4,9 @@ var app 		= module.exports = express();
 var serv 		= require('http').Server(app);
 var port 		= process.env.PORT || 3000;
 var path    	= require("path");
+var db			= ''; // carregar mongo depois
+var socket 		= require('socket.io')(serv,{});
+var sockets     = require('./custom_modules/sockets')(socket, db);
 
 try
 {

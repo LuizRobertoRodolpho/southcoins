@@ -256,12 +256,5 @@ var clientViewModel = new Vue({
 });
 
 $(document).ready(function () {
-    $("#applyFilterButton").click(function () {
-        startMonitor();
-    });
-    // $("#itemsDiv").fadeOut("slow", function () {
-    // 	//getImoveis();
-    // 	checkStorage();
-    // });
     checkStorage();
 });
