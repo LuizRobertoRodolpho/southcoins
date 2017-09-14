@@ -1,12 +1,14 @@
-var request 	= require('request'); 		// requisições
-var express 	= require('express');		// routes
-var app 		= module.exports = express();
-var serv 		= require('http').Server(app);
-var port 		= process.env.PORT || 3000;
-var path    	= require("path");
-var db			= ''; // carregar mongo depois
-var socket 		= require('socket.io')(serv,{});
-var sockets     = require('./custom_modules/sockets')(socket, db);
+const request 	= require('request'); 		// requisições
+const express 	= require('express');		// routes
+const app 		= module.exports = express();
+const serv 		= require('http').Server(app);
+const port 		= process.env.PORT || 3000;
+const path    	= require("path");
+const db		= ''; // carregar mongo depois
+const bitfinex	= require('bitfinex-api-node');
+const socket 	= require('socket.io')(serv,{});
+const sockets   = require('./custom_modules/sockets')(socket, db);
+const orderBook = require('./custom_modules/bitfinex')(sockets, bitfinex);
 
 try
 {
@@ -18,6 +20,8 @@ try
 	
 	serv.listen(port, function () {
 		console.log('Aplicação iniciada. Porta: ' + port);
+		orderBook.start();
+		//ConnectBitfinex();
 	});
 }
 catch (e)

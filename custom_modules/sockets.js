@@ -36,6 +36,10 @@ module.exports = function (io, db) {
 		}
 	}
 
+	module.report = function (data) {
+		io.emit('broadcast', data);
+	}
+
 	io.sockets.on('connection', function (socket) {
 		socket.id = Math.random();
 		SOCKET_LIST[socket.id] = User(socket);
